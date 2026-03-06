@@ -26,5 +26,5 @@ This project simulates basic SOC alert detection logic by analysing authenticati
 
 \## How to Run
 
-auth.log is a text file mimicking authentication network logs. If you were to use your own file, simply replace the 'log_file' field on line 6.
+auth.log is a text file mimicking authentication network logs.
 
