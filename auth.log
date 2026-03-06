@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-03-01 12:00:01 INFO Successful login from 192.168.1.10
 2026-03-01 12:00:15 INFO Successful login from 192.168.1.11
 2026-03-01 12:00:40 WARNING Failed login from 198.51.100.21
@@ -68,3 +69,14 @@
 2026-03-01 12:18:55 INFO Successful login from 192.168.1.135
 2026-03-01 12:19:30 INFO Successful login from 192.168.1.140
 2026-03-01 12:20:00 INFO Successful login from 192.168.1.150
+=======
+2026-03-01 10:15:32 INFO Successful login from 192.168.1.10
+2026-03-01 10:16:01 WARNING Failed login from 192.168.1.50
+2026-03-01 10:16:05 WARNING Failed login from 192.168.1.50
+2026-03-01 10:16:09 WARNING Failed login from 192.168.1.50
+2026-03-01 10:16:15 WARNING Failed login from 192.168.1.50
+2026-03-01 10:16:20 WARNING Failed login from 192.168.1.50
+2026-03-01 10:17:02 INFO Successful login from 192.168.1.22
+2026-03-01 10:18:45 WARNING Failed login from 10.0.0.5
+2026-03-01 10:18:50 WARNING Failed login from 10.0.0.5
+>>>>>>> 92bb96c6f1d2cb8c67ab9dd80401509974702816
