@@ -36,13 +36,16 @@ for ip, attempts in failed_logins.items():
     attempts.sort()
     
     if len(attempts) >= THRESHOLD:
-        first_attempt = attempts[0]
-        last_attempt = attempts[-1]
-
-        time_diff = (last_attempt - first_attempt).seconds
-
-        if time_diff <= TIMEWINDOW:
-            alerts.append((ip, len(attempts), time_diff))
+        for i in range(len(attempts) - THRESHOLD + 1):
+            window = attempts[i:i + THRESHOLD]
+            time_diff = (window[-1] - window[0]).total_seconds()
+            if time_diff <= TIMEWINDOW:
+                j = i + THRESHOLD
+                while j < len(attempts) and (attempts[j] - attempts[i]).total_seconds() <= TIMEWINDOW:
+                    j += 1
+                window = attempts[i:j]
+                alerts.append((ip, len(window), int((window[-1] - window[0]).total_seconds())))
+                break
 
 print("\nSecurity Alerts:")
 
@@ -67,7 +70,7 @@ with open(CSV_REPORT, "w", newline="") as file:
     ])
 
     for ip, count, seconds in alerts:
-        severity ="High" if count >= 5 else "Medium"
+        severity = "Critical" if count >= 20 else "High" if count >= 10 else "Medium"
         writer.writerow([ip, count, seconds, severity])
         
 

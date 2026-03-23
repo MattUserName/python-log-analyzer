@@ -1,9 +1,3 @@
 IP Address,Failed Attempts,Time Window (seconds),Severity
-198.51.100.21,5,15,High
-45.88.201.12,5,13,High
-185.199.110.77,5,11,High
-203.0.113.77,5,12,High
-91.234.45.90,5,10,High
-203.0.113.140,5,12,High
-45.90.12.10,5,12,High
-192.168.1.50,5,19,High
+192.168.1.45,7,114,Medium
+203.0.113.47,6,90,Medium
